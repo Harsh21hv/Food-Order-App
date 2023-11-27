@@ -37689,7 +37689,7 @@ var Restaurantmenu = function Restaurantmenu() {
   var _resInfo$cards$2$grou = resInfo === null || resInfo === void 0 || (_resInfo$cards$2 = resInfo.cards[2]) === null || _resInfo$cards$2 === void 0 || (_resInfo$cards$2 = _resInfo$cards$2.groupedCard) === null || _resInfo$cards$2 === void 0 || (_resInfo$cards$2 = _resInfo$cards$2.cardGroupMap) === null || _resInfo$cards$2 === void 0 || (_resInfo$cards$2 = _resInfo$cards$2.REGULAR) === null || _resInfo$cards$2 === void 0 || (_resInfo$cards$2 = _resInfo$cards$2.cards[2]) === null || _resInfo$cards$2 === void 0 || (_resInfo$cards$2 = _resInfo$cards$2.card) === null || _resInfo$cards$2 === void 0 ? void 0 : _resInfo$cards$2.card,
     itemCards = _resInfo$cards$2$grou.itemCards;
   console.log(itemCards);
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, name, " "), /*#__PURE__*/_react.default.createElement("h2", null, costForTwo / 100, " for Two"), /*#__PURE__*/_react.default.createElement("h2", null, "Menu"), /*#__PURE__*/_react.default.createElement("ul", null, itemCards.map(function (items) {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, name, " "), /*#__PURE__*/_react.default.createElement("h2", null, costForTwo / 100, " for Two"), /*#__PURE__*/_react.default.createElement("h2", null, "Menu"), /*#__PURE__*/_react.default.createElement("ul", null, itemCards && itemCards.map(function (items) {
     return /*#__PURE__*/_react.default.createElement("li", {
       key: items.card.info.id
     }, items.card.info.name, "- Rs", " ", items.card.info.price / 100 || items.card.info.defaultPrice / 100);
