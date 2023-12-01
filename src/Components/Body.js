@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./shimmer.js";
 import { Link } from "react-router-dom";
 import { resList_URL } from "../utils/constants.js";
+import Skeleton from "../lib/Skeleton/Skeleton.js";
 const Body = () => {
   const [listOfRes, setlistOfRes] = useState(null);
   const [filteredRes, setFilteredres] = useState([]);
@@ -32,7 +33,7 @@ const Body = () => {
   };
 
   return listOfRes === null ? (
-    <Shimmer />
+    <Skeleton/>
   ) : (
     <div className="body">
       <div className="filter">
@@ -72,7 +73,7 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredRes.map((Restaurant) => (
-          <Link
+          <Link className="resCard"
             to={"/Restaurant/" + Restaurant.info.id}
             key={Restaurant.info.id}
           >

@@ -37379,10 +37379,13 @@ var Header = function Header() {
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "navitems"
   }, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    className: "nav",
     to: "/"
   }, "Home")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    className: "nav",
     to: "/about"
   }, "About")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    className: "nav",
     to: "/contact"
   }, "Contact Us")), /*#__PURE__*/_react.default.createElement("li", null, "Cart"), /*#__PURE__*/_react.default.createElement("button", {
     className: "login",
@@ -37470,7 +37473,27 @@ var Shimmer = function Shimmer() {
   }, "Cards for Restaurant"));
 };
 var _default = exports.default = Shimmer;
-},{"react":"node_modules/react/index.js"}],"src/Components/Body.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"src/lib/Skeleton/Skeleton.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Skeleton;
+function Skeleton(props) {
+  var width = props.width || "50px",
+    height = props.height || "50px",
+    radius = props.radius || "4px";
+  return /*#__PURE__*/React.createElement("div", {
+    className: "skeleton",
+    style: {
+      height: "".concat(height),
+      width: "".concat(width),
+      borderRadius: "".concat(radius)
+    }
+  });
+}
+},{}],"src/Components/Body.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37482,6 +37505,7 @@ var _Restaurantcard = _interopRequireDefault(require("./Restaurantcard.js"));
 var _shimmer = _interopRequireDefault(require("./shimmer.js"));
 var _reactRouterDom = require("react-router-dom");
 var _constants = require("../utils/constants.js");
+var _Skeleton = _interopRequireDefault(require("../lib/Skeleton/Skeleton.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
 function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
@@ -37541,7 +37565,7 @@ var Body = function Body() {
       return _ref.apply(this, arguments);
     };
   }();
-  return listOfRes === null ? /*#__PURE__*/_react.default.createElement(_shimmer.default, null) : /*#__PURE__*/_react.default.createElement("div", {
+  return listOfRes === null ? /*#__PURE__*/_react.default.createElement(_Skeleton.default, null) : /*#__PURE__*/_react.default.createElement("div", {
     className: "body"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "filter"
@@ -37573,6 +37597,7 @@ var Body = function Body() {
     className: "res-container"
   }, filteredRes.map(function (Restaurant) {
     return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      className: "resCard",
       to: "/Restaurant/" + Restaurant.info.id,
       key: Restaurant.info.id
     }, /*#__PURE__*/_react.default.createElement(_Restaurantcard.default, {
@@ -37581,7 +37606,7 @@ var Body = function Body() {
   })));
 };
 var _default = exports.default = Body;
-},{"react":"node_modules/react/index.js","./Restaurantcard.js":"src/Components/Restaurantcard.js","./shimmer.js":"src/Components/shimmer.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","../utils/constants.js":"src/utils/constants.js"}],"src/Components/User.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Restaurantcard.js":"src/Components/Restaurantcard.js","./shimmer.js":"src/Components/shimmer.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","../utils/constants.js":"src/utils/constants.js","../lib/Skeleton/Skeleton.js":"src/lib/Skeleton/Skeleton.js"}],"src/Components/User.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37865,7 +37890,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51441" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52294" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

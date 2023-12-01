@@ -14,22 +14,22 @@
 }
 .navitems > ul >li{
     padding:20px 35px;
-
+    
 }
 .res-card{
     width: 200px;
     margin: 10px;
+    border-radius: 5px;
+
 }
-.res-card:hover{
-    border: 1px solid black;
-    cursor: pointer;
-}
+
 .search{
     padding:15px;
 }
 .res-logo{
-    width: 190px;
-    margin: 5px;
+    width: 200px;
+  
+   
 }
 .res-container{
     display: flex;
@@ -98,4 +98,32 @@
     
 }
 
+.nav{
+    text-decoration: none;
+    color:rgb(61,65,82)
+   
+}
+.nav:hover{
+    font-size: larger;
+    transition: linear 0.02s;
+   transform: ease;
+}
+.resCard{
+    text-decoration: none;
+    color:rgb(61,65,82)
+}
+
+.skeleton {
+    background: linear-gradient(90deg, #ececec 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 2s infinite;
+  }
+  @keyframes loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
 
