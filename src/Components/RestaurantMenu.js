@@ -1,14 +1,15 @@
 import React from "react";
-import Shimmer from "./shimmer";
+
 import { useParams } from "react-router-dom";
 import useResMenu from "../utils/useResMenu";
+import HomepageSkeleton from "../lib/Skeleton/HomepageSkeleton";
 
 const Restaurantmenu = () => {
   const { id } = useParams();
 
   const resInfo = useResMenu(id);
 
-  if (resInfo === null) return <Shimmer />;
+  if (resInfo === null) return <HomepageSkeleton/>;
 
   console.log(resInfo);
 

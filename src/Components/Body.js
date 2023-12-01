@@ -1,7 +1,6 @@
 import React from "react";
 import Restaurantcard from "./Restaurantcard.js";
 import { useState, useEffect } from "react";
-import Shimmer from "./shimmer.js";
 import { Link } from "react-router-dom";
 import { resList_URL } from "../utils/constants.js";
 import HomepageSkeleton from "../lib/Skeleton/HomepageSkeleton.js";
@@ -32,7 +31,7 @@ const Body = () => {
     );
   };
 
-  return listOfRes !== null ? (
+  return listOfRes === null ? (
     <HomepageSkeleton/>
   ) : (
     <div className="body">

@@ -48,17 +48,6 @@
     padding: 10px 20px;
 
 }
-
-.shimmer{
-    display: flex;
-    flex-wrap: wrap;
-}
-.shimmer-card{
-    margin: 10px;
-   width: 200px;
-   height: 300px;
-   background-color: rgb(156, 161, 158);
-}
 .login{
     margin :auto;
     border: 0px;
@@ -94,14 +83,11 @@
 .About{
     border: 1px solid black;
     margin: 50px 0px;
- 
-    
 }
 
 .nav{
     text-decoration: none;
     color:rgb(61,65,82)
-   
 }
 .nav:hover{
     font-size: larger;
@@ -126,8 +112,76 @@
       background-position: -200% 0;
     }
   }
+
   .homepage-skeleton{
-    gap: 50px;
-    margin-top: 10px;
+    margin-left: 10px;
+    margin-top:80px;
+    gap: 20px;
+    display: flex;
   }
 
+  .contact1{
+    flex-grow: 1;
+  }
+  .contact2{
+    padding: 0 20px;
+    background: #37718e;
+    min-height: 100vh;
+  }
+  .contact3{
+    padding-top: 33px;
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact4{
+    color: #fff;
+    margin-bottom: 37px;
+    margin-top: 37px;
+    position: relative;
+  }
+  .support{
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+   
+  }
+  .S1{
+    margin-top: 2px;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+    letter-spacing: 0;
+  }
+  .contact5{
+    width: 1302px;
+    height: 475px;
+    background-color: #ececec;
+    box-sizing: inherit;
+    margin: 0px;
+    padding: 0px;
+    
+  }
+  .faq{
+    position: relative;
+    padding-top: 20px;
+    padding-left: 620px;
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+    font-size: 30px;
+
+  }
+  .c2{
+    padding-left: 60px;
+    padding-top: 30px;
+    font-size: 25px;
+    color: "#f0f0f0";
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+  }
+  p{
+    font-size: 20px;
+  }

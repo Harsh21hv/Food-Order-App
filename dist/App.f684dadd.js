@@ -37387,7 +37387,7 @@ var Header = function Header() {
   }, "About")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     className: "nav",
     to: "/contact"
-  }, "Contact Us")), /*#__PURE__*/_react.default.createElement("li", null, "Cart"), /*#__PURE__*/_react.default.createElement("button", {
+  }, "Support")), /*#__PURE__*/_react.default.createElement("li", null, "Cart"), /*#__PURE__*/_react.default.createElement("button", {
     className: "login",
     onClick: function onClick() {
       btn === "Login" ? setbtn("Logout") : setbtn("Login");
@@ -37426,54 +37426,7 @@ var Restaurantcard = function Restaurantcard(_ref) {
   }), /*#__PURE__*/_react.default.createElement("h3", null, name), /*#__PURE__*/_react.default.createElement("h4", null, cuisines.join(", ")), /*#__PURE__*/_react.default.createElement("h4", null, avgRating), /*#__PURE__*/_react.default.createElement("h4", null, costForTwo), /*#__PURE__*/_react.default.createElement("h4", null, resdata.info.sla.deliveryTime, " minutes"));
 };
 var _default = exports.default = Restaurantcard;
-},{"react":"node_modules/react/index.js","../utils/constants":"src/utils/constants.js"}],"src/Components/shimmer.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireDefault(require("react"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var Shimmer = function Shimmer() {
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Cards for Restaurant"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Cards for Restaurant"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Cards for Restaurant"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Cards for Restaurant"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Cards for Restaurant"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Cards for Restaurant"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Cards for Restaurant"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Cards for Restaurant"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Cards for Restaurant"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Cards for Restaurant"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Cards for Restaurant"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Cards for Restaurant"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Cards for Restaurant"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Cards for Restaurant"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Cards for Restaurant"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Cards for Restaurant"));
-};
-var _default = exports.default = Shimmer;
-},{"react":"node_modules/react/index.js"}],"src/lib/Skeleton/Skeleton.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../utils/constants":"src/utils/constants.js"}],"src/lib/Skeleton/Skeleton.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37506,12 +37459,47 @@ var _react = _interopRequireDefault(require("react"));
 var _Skeleton = _interopRequireDefault(require("./Skeleton"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 var HomepageSkeleton = function HomepageSkeleton() {
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
     className: "homepage-skeleton"
   }, /*#__PURE__*/_react.default.createElement(_Skeleton.default, {
-    width: "150px",
-    height: "200px"
-  }), /*#__PURE__*/_react.default.createElement(_Skeleton.default, null), /*#__PURE__*/_react.default.createElement(_Skeleton.default, null), /*#__PURE__*/_react.default.createElement(_Skeleton.default, null), /*#__PURE__*/_react.default.createElement(_Skeleton.default, null), /*#__PURE__*/_react.default.createElement(_Skeleton.default, null), /*#__PURE__*/_react.default.createElement(_Skeleton.default, null), /*#__PURE__*/_react.default.createElement(_Skeleton.default, null), /*#__PURE__*/_react.default.createElement(_Skeleton.default, null), /*#__PURE__*/_react.default.createElement(_Skeleton.default, null), /*#__PURE__*/_react.default.createElement(_Skeleton.default, null), /*#__PURE__*/_react.default.createElement(_Skeleton.default, null), /*#__PURE__*/_react.default.createElement(_Skeleton.default, null), /*#__PURE__*/_react.default.createElement(_Skeleton.default, null), /*#__PURE__*/_react.default.createElement(_Skeleton.default, null));
+    width: "200px",
+    height: "450px"
+  }), /*#__PURE__*/_react.default.createElement(_Skeleton.default, {
+    width: "200px",
+    height: "450px"
+  }), /*#__PURE__*/_react.default.createElement(_Skeleton.default, {
+    width: "200px",
+    height: "450px"
+  }), /*#__PURE__*/_react.default.createElement(_Skeleton.default, {
+    width: "200px",
+    height: "450px"
+  }), /*#__PURE__*/_react.default.createElement(_Skeleton.default, {
+    width: "200px",
+    height: "450px"
+  }), /*#__PURE__*/_react.default.createElement(_Skeleton.default, {
+    width: "200px",
+    height: "450px"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "homepage-skeleton"
+  }, /*#__PURE__*/_react.default.createElement(_Skeleton.default, {
+    width: "200px",
+    height: "450px"
+  }), /*#__PURE__*/_react.default.createElement(_Skeleton.default, {
+    width: "200px",
+    height: "450px"
+  }), /*#__PURE__*/_react.default.createElement(_Skeleton.default, {
+    width: "200px",
+    height: "450px"
+  }), /*#__PURE__*/_react.default.createElement(_Skeleton.default, {
+    width: "200px",
+    height: "450px"
+  }), /*#__PURE__*/_react.default.createElement(_Skeleton.default, {
+    width: "200px",
+    height: "450px"
+  }), /*#__PURE__*/_react.default.createElement(_Skeleton.default, {
+    width: "200px",
+    height: "450px"
+  })));
 };
 var _default = exports.default = HomepageSkeleton;
 },{"react":"node_modules/react/index.js","./Skeleton":"src/lib/Skeleton/Skeleton.js"}],"src/Components/Body.js":[function(require,module,exports) {
@@ -37523,7 +37511,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
 var _Restaurantcard = _interopRequireDefault(require("./Restaurantcard.js"));
-var _shimmer = _interopRequireDefault(require("./shimmer.js"));
 var _reactRouterDom = require("react-router-dom");
 var _constants = require("../utils/constants.js");
 var _HomepageSkeleton = _interopRequireDefault(require("../lib/Skeleton/HomepageSkeleton.js"));
@@ -37586,7 +37573,7 @@ var Body = function Body() {
       return _ref.apply(this, arguments);
     };
   }();
-  return listOfRes !== null ? /*#__PURE__*/_react.default.createElement(_HomepageSkeleton.default, null) : /*#__PURE__*/_react.default.createElement("div", {
+  return listOfRes === null ? /*#__PURE__*/_react.default.createElement(_HomepageSkeleton.default, null) : /*#__PURE__*/_react.default.createElement("div", {
     className: "body"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "filter"
@@ -37627,7 +37614,7 @@ var Body = function Body() {
   })));
 };
 var _default = exports.default = Body;
-},{"react":"node_modules/react/index.js","./Restaurantcard.js":"src/Components/Restaurantcard.js","./shimmer.js":"src/Components/shimmer.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","../utils/constants.js":"src/utils/constants.js","../lib/Skeleton/HomepageSkeleton.js":"src/lib/Skeleton/HomepageSkeleton.js"}],"src/Components/User.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Restaurantcard.js":"src/Components/Restaurantcard.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","../utils/constants.js":"src/utils/constants.js","../lib/Skeleton/HomepageSkeleton.js":"src/lib/Skeleton/HomepageSkeleton.js"}],"src/Components/User.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37756,7 +37743,25 @@ exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 var Contact = function Contact() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "8299557732"));
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "contact1"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "contact2"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "contact3"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "contact4"
+  }, /*#__PURE__*/_react.default.createElement("h1", {
+    className: "support"
+  }, "Help & Support"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "S1"
+  }, "Let's take a step ahead & help you better")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "contact5"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "faq"
+  }, " FAQs"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "c2"
+  }, "What is Swiggy customer care?", /*#__PURE__*/_react.default.createElement("p", null, "We value our customer\u2019s time and hence moved away from a single customer care number to a comprehensive chat-based support system for quick and easy resolution.", /*#__PURE__*/_react.default.createElement("br", null), " You no longer have to go through the maze of an IVRS call support. Just search for your issue in the help section on this page and initiate a chat with us. A customer care executive", " ", /*#__PURE__*/_react.default.createElement("br", null), " will be assigned to you shortly. You can also email us your issue on support@swiggy.in Note: We value your privacy and your information is safe with us. Please do not reveal any personal information, bank account number, OTP etc. to another person. A Swiggy representative will never ask you for these details. Please do not reveal these details to fraudsters and imposters claiming to be calling on our behalf. Be vigilant and do not entertain phishing calls or emails"))))));
 };
 var _default = exports.default = Contact;
 },{"react":"node_modules/react/index.js"}],"src/utils/useResMenu.js":[function(require,module,exports) {
@@ -37823,16 +37828,16 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
-var _shimmer = _interopRequireDefault(require("./shimmer"));
 var _reactRouterDom = require("react-router-dom");
 var _useResMenu = _interopRequireDefault(require("../utils/useResMenu"));
+var _HomepageSkeleton = _interopRequireDefault(require("../lib/Skeleton/HomepageSkeleton"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 var Restaurantmenu = function Restaurantmenu() {
   var _resInfo$cards$, _resInfo$cards$2;
   var _useParams = (0, _reactRouterDom.useParams)(),
     id = _useParams.id;
   var resInfo = (0, _useResMenu.default)(id);
-  if (resInfo === null) return /*#__PURE__*/_react.default.createElement(_shimmer.default, null);
+  if (resInfo === null) return /*#__PURE__*/_react.default.createElement(_HomepageSkeleton.default, null);
   console.log(resInfo);
   var _resInfo$cards$0$card = resInfo === null || resInfo === void 0 || (_resInfo$cards$ = resInfo.cards[0]) === null || _resInfo$cards$ === void 0 || (_resInfo$cards$ = _resInfo$cards$.card) === null || _resInfo$cards$ === void 0 || (_resInfo$cards$ = _resInfo$cards$.card) === null || _resInfo$cards$ === void 0 ? void 0 : _resInfo$cards$.info,
     name = _resInfo$cards$0$card.name,
@@ -37847,7 +37852,7 @@ var Restaurantmenu = function Restaurantmenu() {
   })));
 };
 var _default = exports.default = Restaurantmenu;
-},{"react":"node_modules/react/index.js","./shimmer":"src/Components/shimmer.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","../utils/useResMenu":"src/utils/useResMenu.js"}],"src/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","../utils/useResMenu":"src/utils/useResMenu.js","../lib/Skeleton/HomepageSkeleton":"src/lib/Skeleton/HomepageSkeleton.js"}],"src/App.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -37911,7 +37916,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52294" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57023" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
