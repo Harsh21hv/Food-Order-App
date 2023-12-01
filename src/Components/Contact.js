@@ -12,7 +12,7 @@ const Contact = () => {
           <div className="contact5">
             <div className="faq"> FAQs</div>
             <div className="c2">
-              What is Swiggy customer care?
+              What is Diwine Dinings customer care?
               <p>
                 We value our customer’s time and hence moved away from a single
                 customer care number to a comprehensive chat-based support
