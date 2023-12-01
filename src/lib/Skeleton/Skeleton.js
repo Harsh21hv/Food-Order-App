@@ -1,3 +1,6 @@
+import React from "react";
+
+
 export default function Skeleton(props) {
     let width = props.width || "50px",
       height = props.height || "50px",
@@ -15,4 +18,3 @@ export default function Skeleton(props) {
     );
   }
 
-  

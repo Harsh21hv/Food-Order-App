@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./shimmer.js";
 import { Link } from "react-router-dom";
 import { resList_URL } from "../utils/constants.js";
-import Skeleton from "../lib/Skeleton/Skeleton.js";
+import HomepageSkeleton from "../lib/Skeleton/HomepageSkeleton.js";
 const Body = () => {
   const [listOfRes, setlistOfRes] = useState(null);
   const [filteredRes, setFilteredres] = useState([]);
@@ -32,8 +32,8 @@ const Body = () => {
     );
   };
 
-  return listOfRes === null ? (
-    <Skeleton/>
+  return listOfRes !== null ? (
+    <HomepageSkeleton/>
   ) : (
     <div className="body">
       <div className="filter">

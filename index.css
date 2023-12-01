@@ -126,4 +126,8 @@
       background-position: -200% 0;
     }
   }
+  .homepage-skeleton{
+    gap: 50px;
+    margin-top: 10px;
+  }
 
