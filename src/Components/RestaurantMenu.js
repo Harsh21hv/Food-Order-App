@@ -1,7 +1,6 @@
 import React from "react";
-
 import { useParams } from "react-router-dom";
-import useResMenu from "../utils/useResMenu";
+import useResMenu from "../utils/custom hooks/useResMenu";
 import HomepageSkeleton from "../lib/Skeleton/HomepageSkeleton";
 
 const Restaurantmenu = () => {
@@ -9,7 +8,7 @@ const Restaurantmenu = () => {
 
   const resInfo = useResMenu(id);
 
-  if (resInfo === null) return <HomepageSkeleton/>;
+  if (resInfo === null) return <HomepageSkeleton />;
 
   console.log(resInfo);
 

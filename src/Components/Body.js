@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { resList_URL } from "../utils/constants.js";
 import HomepageSkeleton from "../lib/Skeleton/HomepageSkeleton.js";
+import useOnlineStatus from "../utils/custom hooks/useOnlineStatus.js";
 const Body = () => {
   const [listOfRes, setlistOfRes] = useState(null);
   const [filteredRes, setFilteredres] = useState([]);
@@ -16,6 +17,7 @@ const Body = () => {
   const fetchdata = async () => {
     const data = await fetch(resList_URL);
     const json = await data.json();
+   
 
     console.log(json);
     if (
@@ -29,8 +31,12 @@ const Body = () => {
     setlistOfRes(
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-  };
+   };
+   const onlineStatus= useOnlineStatus();
 
+   if(onlineStatus===false) return <h1> looks like you are offline.. </h1>
+     
+     
   return listOfRes === null ? (
     <HomepageSkeleton/>
   ) : (
