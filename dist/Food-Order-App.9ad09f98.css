@@ -1,0 +1,189 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.logo {
+    width: 150px;
+}
+.navitems > ul{
+    display: flex;
+    list-style: none;
+    padding:20px 60px;
+    font-size: 25px;
+}
+.navitems > ul >li{
+    padding:20px 35px;
+    
+}
+.res-card{
+    width: 200px;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+
+.search{
+    padding:15px;
+}
+.res-logo{
+    width: 200px;
+  
+   
+}
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.filter-btn{
+    margin: 15px;
+    font-size: 12px;
+    background-color: rgb(252,128,25);
+    font-family: sans-serif;
+    cursor: pointer;
+    border-radius: 50px;
+    color:white;
+    padding: 4px;
+    border: none;
+    padding: 10px 20px;
+
+}
+.login{
+    margin :auto;
+    border: 0px;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+.login:hover{
+    background-color: black;
+    color: white;
+
+}
+.filter{
+    display: flex;
+    justify-content: space-between;
+}
+.search-box{
+    border: 1px solid rgb(211, 147, 28);
+    padding: 10px 20px;
+}
+.search{
+    margin-right: 40px;
+}
+.searchBtn{
+    border: none;
+    padding: 11px 20px;
+    background-color: orange;
+    cursor: pointer;
+    color:white;
+}
+.filter-btn:hover{
+    background-color: orange;
+}
+.About{
+    border: 1px solid black;
+    margin: 50px 0px;
+}
+
+.nav{
+    text-decoration: none;
+    color:rgb(61,65,82)
+}
+.nav:hover{
+    font-size: larger;
+    transition: linear 0.02s;
+   transform: ease;
+}
+.resCard{
+    text-decoration: none;
+    color:rgb(61,65,82)
+}
+
+.skeleton {
+    background: linear-gradient(90deg, #ececec 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 2s infinite;
+  }
+  @keyframes loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  .homepage-skeleton{
+    margin-left: 10px;
+    margin-top:80px;
+    gap: 20px;
+    display: flex;
+  }
+
+  .contact1{
+    flex-grow: 1;
+  }
+  .contact2{
+    padding: 0 20px;
+    background: #37718e;
+    min-height: 100vh;
+  }
+  .contact3{
+    padding-top: 33px;
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact4{
+    color: #fff;
+    margin-bottom: 37px;
+    margin-top: 37px;
+    position: relative;
+  }
+  .support{
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+   
+  }
+  .S1{
+    margin-top: 2px;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+    letter-spacing: 0;
+  }
+  .contact5{
+    width: 1302px;
+    height: 475px;
+    background-color: #ececec;
+    box-sizing: inherit;
+    margin: 0px;
+    padding: 0px;
+    
+  }
+  .faq{
+    position: relative;
+    padding-top: 20px;
+    padding-left: 620px;
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+    font-size: 30px;
+
+  }
+  .c2{
+    padding-left: 60px;
+    padding-top: 30px;
+    font-size: 25px;
+    color: "#f0f0f0";
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+  }
+  p{
+    font-size: 20px;
+  }
+
+/*# sourceMappingURL=/Food-Order-App.9ad09f98.css.map */

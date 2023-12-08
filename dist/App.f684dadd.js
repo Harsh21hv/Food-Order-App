@@ -28912,7 +28912,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.UNSAFE_ErrorResponseImpl = exports.UNSAFE_DeferredData = exports.UNSAFE_DEFERRED_SYMBOL = exports.IDLE_NAVIGATION = exports.IDLE_FETCHER = exports.IDLE_BLOCKER = exports.Action = exports.AbortedDeferredError = void 0;
 exports.UNSAFE_convertRouteMatchToUiMatch = convertRouteMatchToUiMatch;
 exports.UNSAFE_convertRoutesToDataRoutes = convertRoutesToDataRoutes;
-exports.UNSAFE_getResolveToMatches = getResolveToMatches;
+exports.UNSAFE_getPathContributingMatches = getPathContributingMatches;
 exports.UNSAFE_invariant = invariant;
 exports.UNSAFE_warning = warning;
 exports.createBrowserHistory = createBrowserHistory;
@@ -28969,7 +28969,7 @@ function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symb
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 /**
- * @remix-run/router v1.13.0
+ * @remix-run/router v1.13.1
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -29947,14 +29947,6 @@ function getInvalidPathError(char, field, dest, path) {
 function getPathContributingMatches(matches) {
   return matches.filter(function (match, index) {
     return index === 0 || match.route.path && match.route.path.length > 0;
-  });
-}
-// Return the array of pathnames for the current route matches - used to
-// generate the routePathnames input for resolveTo()
-function getResolveToMatches(matches) {
-  // Use the full pathname for the leaf match so we include splat values for "." links
-  return getPathContributingMatches(matches).map(function (match, idx) {
-    return idx === matches.length - 1 ? match.pathname : match.pathnameBase;
   });
 }
 /**
@@ -32720,7 +32712,9 @@ function normalizeTo(location, matches, basename, prependBasename, to, fromRoute
     activeRouteMatch = matches[matches.length - 1];
   }
   // Resolve the relative path
-  var path = resolveTo(to ? to : ".", getResolveToMatches(contextualMatches), stripBasename(location.pathname, basename) || location.pathname, relative === "path");
+  var path = resolveTo(to ? to : ".", getPathContributingMatches(contextualMatches).map(function (m) {
+    return m.pathnameBase;
+  }), stripBasename(location.pathname, basename) || location.pathname, relative === "path");
   // When `to` is not specified we inherit search/hash from the current
   // location, unlike when to="." and we just inherit the path.
   // See https://github.com/remix-run/remix/issues/927
@@ -34139,7 +34133,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); } /**
-                                                                                                                                                                                                                      * React Router v6.20.0
+                                                                                                                                                                                                                      * React Router v6.20.1
                                                                                                                                                                                                                       *
                                                                                                                                                                                                                       * Copyright (c) Remix Software Inc.
                                                                                                                                                                                                                       *
@@ -34346,7 +34340,9 @@ function useNavigateUnstable() {
     matches = _React$useContext4.matches;
   var _useLocation2 = useLocation(),
     locationPathname = _useLocation2.pathname;
-  var routePathnamesJson = JSON.stringify((0, _router.UNSAFE_getResolveToMatches)(matches));
+  var routePathnamesJson = JSON.stringify((0, _router.UNSAFE_getPathContributingMatches)(matches).map(function (match) {
+    return match.pathnameBase;
+  }));
   var activeRef = React.useRef(false);
   useIsomorphicLayoutEffect(function () {
     activeRef.current = true;
@@ -34431,7 +34427,9 @@ function useResolvedPath(to, _temp2) {
     matches = _React$useContext6.matches;
   var _useLocation3 = useLocation(),
     locationPathname = _useLocation3.pathname;
-  var routePathnamesJson = JSON.stringify((0, _router.UNSAFE_getResolveToMatches)(matches));
+  var routePathnamesJson = JSON.stringify((0, _router.UNSAFE_getPathContributingMatches)(matches).map(function (match) {
+    return match.pathnameBase;
+  }));
   return React.useMemo(function () {
     return (0, _router.resolveTo)(to, JSON.parse(routePathnamesJson), locationPathname, relative === "path");
   }, [to, routePathnamesJson, locationPathname, relative]);
@@ -35178,7 +35176,9 @@ function Navigate(_ref4) {
 
   // Resolve the path outside of the effect so that when effects run twice in
   // StrictMode they navigate to the same place
-  var path = (0, _router.resolveTo)(to, (0, _router.UNSAFE_getResolveToMatches)(matches), locationPathname, relative === "path");
+  var path = (0, _router.resolveTo)(to, (0, _router.UNSAFE_getPathContributingMatches)(matches).map(function (match) {
+    return match.pathnameBase;
+  }), locationPathname, relative === "path");
   var jsonPath = JSON.stringify(path);
   React.useEffect(function () {
     return navigate(JSON.parse(jsonPath), {
@@ -35899,7 +35899,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; } /**
-                                                                       * React Router DOM v6.20.0
+                                                                       * React Router DOM v6.20.1
                                                                        *
                                                                        * Copyright (c) Remix Software Inc.
                                                                        *
@@ -37014,8 +37014,10 @@ function useFormAction(action, _temp2) {
   var path = _extends({}, (0, _reactRouter.useResolvedPath)(action ? action : ".", {
     relative: relative
   }));
-  // If no action was specified, browsers will persist current search params
-  // when determining the path, so match that behavior
+  // Previously we set the default action to ".". The problem with this is that
+  // `useResolvedPath(".")` excludes search params of the resolved URL. This is
+  // the intended behavior of when "." is specifically provided as
+  // the form action, but inconsistent w/ browsers when the action is omitted.
   // https://github.com/remix-run/remix/issues/927
   var location = (0, _reactRouter.useLocation)();
   if (action == null) {
@@ -38015,7 +38017,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61453" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60410" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
